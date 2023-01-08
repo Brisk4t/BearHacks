@@ -7,8 +7,11 @@ import random
 # openai.api_key = "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"
 
 
-def open_json():
-    with open('ualberta_data/courses.json') as f:
+def open_json(json_location):
+    absolute_path = os.path.dirname(__file__)
+    relative_path = json_location
+    full_path = os.path.join(absolute_path, relative_path)
+    with open(full_path) as f:
         data = json.load(f)
     
     return data
@@ -111,15 +114,15 @@ def substisute_difficulty(json_data):
     return json_data
 
 def main():
-    json_data = open_json() # Json_data -> Dict
+    json_data = open_json("ualberta_data/courses.json") # Json_data -> Dict
 
     
     #json_data = create_prerequisite(json_data)
     #json_data = substisute_difficulty(json_data)
     #write_json(json_data)
 
-    print(json_data['CMPUT250']['course_prerequisites'])
-    print(get_courses(json_data['CMPUT250']['course_prerequisites']))
+    print(json_data['CMPUT 267']['course_prerequisites'])
+    print(get_courses(json_data['CMPUT 267']['course_prerequisites']))
 
     #prereq_prompt(json_data['CMPUT291']['course_prerequisites'])
 
