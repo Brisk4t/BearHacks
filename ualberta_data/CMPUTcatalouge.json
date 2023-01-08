@@ -1,163 +1,164 @@
 {
-    "years": [
-        {
+   
 
         "year1": {
         "required courses":
         [
             {
                 "name": "CMPUT 174",
-                "title": "Introduction to the Foundations of Computation I",
+                "title": "Introduction to the Foundations of Computation I"
             },
             {
                 "name": "CMPUT 175",
-                "title": "Introduction to the Foundations of Computation II",
+                "title": "Introduction to the Foundations of Computation II"
             
-            },
-        ]
-        {
-        "optional courses": {
+            }
+        ],
+        
+        "optional courses":{ 
             "courses": [
                 {
-                    "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
-                    "courses":
-                    [
-                        {
-                        "name": "ENGl 102",
-                        "title": "Introduction to Critical Analysis",
-                    
-                    },
-                    {
-                    "name": "ENGl 103",
-                        "title": "Case Studies in Research",
-                    },
-                    {
-                    "name": "ENGl 108",
-                        "title": "Introduction to Language and Literature",
-                    },
-                    {
-                    "name": "ENGl 125",
-                        "title": "Indigenous Literatures",
-                    },
-                    {
-                    "name": "WRS 100",
-                        "title": "Topics in Academic Writing",
-                    },
-                    {
-                    "name": "WRS 101",
-                        "title": "Exploring Writing",
-                    },
-                    {
-                    "name": "WRS 102",
-                        "title": "Writing in the Disciplines",
-                    },
-                    {
-                    "name": "WRS 104",
-                        "title": "Writing Persuasive Arguments",
-                    },
-                    ]
-                }
+                "name":"Set 1",
+                "choose": 2,  
+                "courses":
+                [
                 {
-                    "name": "Set 2",
-                    "choose": 1,
-                    "courses": [
-                        {
-                            "name": "MATH 117",
-                            "title": "Honors Calculus I",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 134",
-                            "title": "Calculus for the Life Sciences I",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 144",
-                            "title": "Calculus for the Physical Sciences I",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 154",
-                            "title": "Calculus for Business and Economics I",
-                            "units": 3
-                        }
-                    ]
+                    "name": "ENGl 102",
+                    "title": "Introduction to Critical Analysis"
+                
                 },
                 {
-                    "name": "Set 3",
-                    "choose": 1,
-                    "courses": [
-                        {
-                            "name": "MATH 118",
-                            "title": "Honors Calculus II",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 136",
-                            "title": "Calculus for the Life Sciences II",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 146",
-                            "title": "Calculus for the Physical Sciences II",
-                            "units": 3
-                        },
-                        {
-                            "name": "MATH 156",
-                            "title": "Calculus for Business and Economics II",
-                            "units": 3
-                        }
+                "name": "ENGl 103",
+                    "title": "Case Studies in Research"
+                },
+                {
+                "name": "ENGl 108",
+                    "title": "Introduction to Language and Literature"
+                },
+                {
+                "name": "ENGl 125",
+                    "title": "Indigenous Literatures"
+                },
+                {
+                "name": "WRS 100",
+                    "title": "Topics in Academic Writing"
+                },
+                {
+                "name": "WRS 101",
+                    "title": "Exploring Writing"
+                },
+                {
+                "name": "WRS 102",
+                    "title": "Writing in the Disciplines"
+                },
+                {
+                "name": "WRS 104",
+                    "title": "Writing Persuasive Arguments"
+                }
                 ]
             },
             {
-             "name": "set4",
-             "choose" :2,
-             "courses": "optional courses",
+                "name": "Set 2",
+                "choose": 1,
+                "courses": [
+                    {
+                    "name": "MATH 117",
+                    "title": "Honors Calculus I",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 134",
+                    "title": "Calculus for the Life Sciences I",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 144",
+                    "title": "Calculus for the Physical Sciences I",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 154",
+                    "title": "Calculus for Business and Economics I",
+                    "units": 3
+                    }
+                ]
+            },
+            {
+                "name": "Set 3",
+                "choose": 1,
+                "courses": [
+                    {
+                    "name": "MATH 118",
+                    "title": "Honors Calculus II",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 136",
+                    "title": "Calculus for the Life Sciences II",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 146",
+                    "title": "Calculus for the Physical Sciences II",
+                    "units": 3
+                    },
+                    {
+                    "name": "MATH 156",
+                    "title": "Calculus for Business and Economics II",
+                    "units": 3
+                    }
+                ]
+            },
+            {
+                "name": "set4",
+                "choose" :2,
+                "courses": "optional courses"
             }
             
             ]
-        },
-        {
-            "year":2,
-            "required courses":
-        [
-            {
-                "name": "MATH 125",
-                "title": "Linear Algebra I",
+            }},
+    
+        "year2":{
+        "required courses":
+                            [
+                            {
+                    "name": "MATH 125",
+                    "title": "Linear Algebra I"
                
-            },
+            }
            
-        ]
-        {
+        ],
+        
+        
+
         "optional courses": {
             "courses": [
                 {
                     "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
+                    "choose": 2, 
                     "courses":
                     [
                         {
-                        "name": "CMPUT 201",
-                        "title": "Introduction to Critical Analysis",
+                    "name": "CMPUT 201",
+                    "title": "Introduction to Critical Analysis"
                     
                     },
                     {
                     "name": "CMPUT 204",
-                        "title": "Case Studies in Research",
+                    "title": "Case Studies in Research"
                     },
                     {
                     "name": "CMPUT 229",
-                        "title": "Introduction to Language and Literature",
+                    "title": "Introduction to Language and Literature"
                     },
                     {
                     "name": "CMPUT 272",
-                        "title": "Indigenous Literatures",
+                    "title": "Indigenous Literatures"
                     },
                     {
                     "name": "CMPUT 291",
-                        "title": "Topics in Academic Writing",
-                    },
+                    "title": "Topics in Academic Writing"
+                    }
                     
                     ]
                 },
@@ -166,126 +167,126 @@
                     "name":"Set 2",
                     "courses":
                     [
-                        {
-                        "name": "STAT 151",
-                        "title": "Introduction to Applied Statistics I",
-                    
+                    {
+                    "name": "STAT 151",
+                    "title": "Introduction to Applied Statistics I"
+                
                     },
                     {
                     "name": "STAT 252",
-                        "title": "Introduction to Applied Statistics II",
-                    },
+                    "title": "Introduction to Applied Statistics II"
+                    }
                     ]
                 },
+                {
+                    "name": "set 3",
+                    "courses":
+                    [
                     {
-                      "name": "set 3",
-                       "courses":
-                       [
-                        {
-                        "name": "STAT 265",
-                        "title": "Statistics I",
+                    "name": "STAT 265",
+                    "title": "Statistics I"
                     
                     },
                     {
                     "name": "STAT 266",
-                        "title": "Statistics II",
-                    },
+                    "title": "Statistics II"
+                    }
                     ]
                 },
-                    {
+                {
                     "name": "set4",
                     "choose" :5,
-                    "courses": "optional courses",
-            }
+                    "courses": "optional courses"
+                }
 
 
             ]
-        },
-        {
-            "year3":{
+        }},
+        
+        "year3":{
 
-            
-            "courses": [
+        
+        "courses": [
     {
         "name": "Set 1",
         "choose":4,
         "courses": [
             {
                 "name": "CMPUT 300",
-                "title": "Computers and Society",
+                "title": "Computers and Society"
                 
             },
             {
                 "name": "CMPUT 301",
-                "title": "Introduction to Software Engineering",
+                "title": "Introduction to Software Engineering"
                 
             },
             {
                 "name": "CMPUT 302",
-                "title": "Introduction to Human Computer Interaction",
+                "title": "Introduction to Human Computer Interaction"
                 
             },
             {
                 "name": "CMPUT 304",
-                "title": "Algorithms II",
+                "title": "Algorithms II"
                 
             },
             {
                 "name": "CMPUT 307",
-                "title": "3D Modeling and Animation",
+                "title": "3D Modeling and Animation"
                 
             },
             {
                 "name": "CMPUT 308",
-                "title": "Video Processing and Applications",
+                "title": "Video Processing and Applications"
                 
             },
             {
                 "name": "CMPUT 312",
-                "title": "Introduction to Robotics and Mechatronics",
+                "title": "Introduction to Robotics and Mechatronics"
                
             },
             {
                 "name": "CMPUT 313",
-                "title": "Computer Networks",
+                "title": "Computer Networks"
                 
             },
             {
                 "name": "CMPUT 325",
-                "title": "Non-Procedural Programming",
+                "title": "Non-Procedural Programming"
                 
             },
             {
                 "name": "CMPUT 328",
-                "title": "Visual Recognition",
+                "title": "Visual Recognition"
                 
             },
             {
               "name": "CMPUT 329",
-                "title": "Visual Recognition",
+                "title": "Visual Recognition"
             },
             {
                 "name": "CMPUT 330",
-                "title": "Introduction to Artificial Intelligence",
+                "title": "Introduction to Artificial Intelligence"
                
             },
             {
                 "name": "CMPUT 350",
-                "title": "Introduction to Computer Graphics",
+                "title": "Introduction to Computer Graphics"
                 
             },
             {
                 "name": "CMPUT 362",
-                "title": "Introduction to Computer Security",   
+                "title": "Introduction to Computer Security" 
         },
         {
                 "name": "CMPUT 365",
-                "title": "Introduction to Machine Learning",
+                "title": "Introduction to Machine Learning"
 
         },
         {
             "name": "CMPUT 372",
-                "title": "Introduction to Compiler Construction",
+                "title": "Introduction to Compiler Construction"
         }
         ]
         
@@ -293,15 +294,15 @@
             {
              "name": "set4",
              "choose" :2,
-             "courses": "optional courses",
+             "courses": "optional courses"
             }
             
             ]
         },
 
-    {
+    
 
-    "year":4,
+    "year4":{
             "courses": [
     {
         "name": "Set 1",
@@ -309,80 +310,80 @@
         "courses": [
             {
                 "name": "CMPUT 300",
-                "title": "Computers and Society",
+                "title": "Computers and Society"
                 
             },
             {
                 "name": "CMPUT 301",
-                "title": "Introduction to Software Engineering",
+                "title": "Introduction to Software Engineering"
                 
             },
             {
                 "name": "CMPUT 302",
-                "title": "Introduction to Human Computer Interaction",
+                "title": "Introduction to Human Computer Interaction"
                 
             },
             {
                 "name": "CMPUT 304",
-                "title": "Algorithms II",
+                "title": "Algorithms II"
                 
             },
             {
                 "name": "CMPUT 307",
-                "title": "3D Modeling and Animation",
+                "title": "3D Modeling and Animation"
                 
             },
             {
                 "name": "CMPUT 308",
-                "title": "Video Processing and Applications",
+                "title": "Video Processing and Applications"
                 
             },
             {
                 "name": "CMPUT 312",
-                "title": "Introduction to Robotics and Mechatronics",
+                "title": "Introduction to Robotics and Mechatronics"
                
             },
             {
                 "name": "CMPUT 313",
-                "title": "Computer Networks",
+                "title": "Computer Networks"
                 
             },
             {
                 "name": "CMPUT 325",
-                "title": "Non-Procedural Programming",
+                "title": "Non-Procedural Programming"
                 
             },
             {
                 "name": "CMPUT 328",
-                "title": "Visual Recognition",
+                "title": "Visual Recognition"
                 
             },
             {
               "name": "CMPUT 329",
-                "title": "Visual Recognition",
+                "title": "Visual Recognition"
             },
             {
                 "name": "CMPUT 330",
-                "title": "Introduction to Artificial Intelligence",
+                "title": "Introduction to Artificial Intelligence"
                
             },
             {
                 "name": "CMPUT 350",
-                "title": "Introduction to Computer Graphics",
+                "title": "Introduction to Computer Graphics"
                 
             },
             {
                 "name": "CMPUT 362",
-                "title": "Introduction to Computer Security",   
+                "title": "Introduction to Computer Security"  
         },
         {
                 "name": "CMPUT 365",
-                "title": "Introduction to Machine Learning",
+                "title": "Introduction to Machine Learning"
 
         },
         {
             "name": "CMPUT 372",
-                "title": "Introduction to Compiler Construction",
+                "title": "Introduction to Compiler Construction"
         }
         ]
     },
@@ -390,13 +391,15 @@
             {
              "name": "set4",
              "choose" :2,
-             "courses": "optional courses",
+             "courses": "optional courses"
             }
             
             ]
-        },
-    ]
-}
+        }
+    
+    }
+
+        
 
 
 
