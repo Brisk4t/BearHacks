@@ -64,8 +64,10 @@ def create_prerequisite(json_data):
 
     return json_data
 
-
+# gets prerequisites of courses
 def get_courses(s):
+    if s is None:
+        return False
     courses = []
 
     # Split the string on the semicolon character

@@ -5,6 +5,7 @@ from spacy.matcher import Matcher
 from pmaw import PushshiftAPI
 import textblob
 from textblob import TextBlob
+from bearhacks import *
 
 
 
@@ -22,8 +23,6 @@ nlp = spacy.load("en_core_web_sm")
 
 # Create a Matcher object
 matcher = Matcher(nlp.vocab)
-
-# Add the course name pattern to the Matcher
 matcher.add('COURSE_NAME', [pattern])
 
 
@@ -72,8 +71,8 @@ api = PushshiftAPI()
 #keywords = ["CMPUT 272", "Cmput 272", "cmput 272", "CMPUT272", "Cmput272", "cmput272"]
 #difficulty_keywords = ["difficulty", "challenging", "hard", "tough", "demanding"]
 
-comments = api.search_comments(q = "MATH 100"
-,subreddit="uAlberta", size=30, sort = "desc" , sort_type =  "score" )
+comments = api.search_comments(q = "CMPUT 272" or "CMPUT272" or "cmput 272" or "cmput272" or "Cmput 272"
+,subreddit="uAlberta", limit=300, sort = "desc" , sort_type =  "score" )
 comment_list = []
 for comment in comments: 
     if any(word in comment.get("body") for word in ["difficulty","easy","challenging", "hard" ,"hardest","difficult","worst"]):
@@ -90,12 +89,12 @@ mainly_about_course = []
 for comment in comment_list:
     cmnt_body = comment.get("body")
     cmnt_body = cmnt_body.lower()
-    cmnt_body = cmnt_body.replace("math 100","math100")
+    cmnt_body = cmnt_body.replace("cmput 272 ","cmput272")
     cmnt_sentance = cmnt_body.split(".")
     #print("CMMNT",cmnt_sentance)
     main_cmmnt = 'none'
     for i in cmnt_sentance:
-        if ("math100" in i):
+        if ("cmput272" in i):
             for z in ["difficulty","easy","challenging", "hard" ,"demanding","difficult","worst"]  :
                 if (z in i):
                     main_cmmnt = i
@@ -110,17 +109,17 @@ for comment in comment_list:
     #doc = custom_tokenizer(doc)
 
     # Initialize a flag to track whether the comment is mainly about CMPUT 272
-    is_mainly_about_cmput_272 = False
+    is_mainly_about = False
     
     # Check if the main subject of the comment is CMPUT 272
     for token in doc:
         #print("dependencies:",token.dep_)
-        if token.dep_ == "nsubj"  and token.text.lower() == "math100":
-            is_mainly_about_cmput_272 = True
+        if token.dep_ == "nsubj"  and token.text.lower() == "cmput272":
+            is_mainly_about = True
             break
     
     # If the main subject is CMPUT 272, add the comment to the mainly_about_cmput_272 list
-    if is_mainly_about_cmput_272:       
+    if is_mainly_about:       
         mainly_about_course.append(main_cmmnt)
 
 print(":::::::::::::WANTED COMMENTS :::::::::::::::::")
@@ -151,8 +150,15 @@ for comment in mainly_about_course:
     sentiment = classify_sentiment(comment)
     sentiment_avg +=  sentiment
     print(f'Comment: {comment} -- Sentiment Score: {sentiment}')
+Fscore = 10000 # arbitary
+if sentiment_num!=0:
+    Fscore = sentiment_avg/sentiment_num
+    print("TEXTBLOB COURSE FINAL SENTIMENT: ",Fscore) 
+    json_data = open_json("ualberta_data/courses.json") # Json_data -> Dict 
+    json_data["CMPUT 272"]["difficulty"]  = Fscore
+elif Fscore>1:
+    print("Not enough data")
 
-print ( " TEXTBLOB COURSE FINAL SENTIMENT: ",sentiment_avg/sentiment_num)
 
 
 """#sentiment analysis by GPT
