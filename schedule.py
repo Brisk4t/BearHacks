@@ -70,6 +70,7 @@ def build_degree(json_data, degree_data):
         fill_preq(item, degree, json_data)
 
 
+    print(degree)
     return degree
 
 
@@ -77,10 +78,20 @@ def build_degree(json_data, degree_data):
 def fill_preq(course, degree, json_data):
     
     for item in degree:
-        if(len(degree) < 40):
-            preqs = get_courses(json_data[item]["course_prerequisites"])
+        preqs = get_courses(json_data[item]["course_prerequisites"])
+        if preqs == False:
+            return
+        try:
             for item in preqs:
-                degree.insert(0, random.choice(item))
+                while (len(degree) < 40) or item == None:
+                    print(item)
+                    choice = random.choice(item)
+                    degree.insert(0, choice)
+                    fill_preq(choice, degree, json_data)
+                
+        except:
+            return
+            
 
 
 def pick_numbers(numbers, n, target):
@@ -91,4 +102,5 @@ def pick_numbers(numbers, n, target):
   closest_comb = min(combs, key=lambda x: abs(sum(x)-target))
   
   return closest_comb
+
 
