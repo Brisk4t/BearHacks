@@ -10,6 +10,7 @@ def build_degree():
 
 
 def main():
-    json_data = open_json()
+    json_data = open_json("ualberta_data/courses.json")
+    degree_data = open_json("ualberta_data/CMPUTcatalogue.json")
 
     build_degree(json_data)
