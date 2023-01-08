@@ -72,8 +72,7 @@ api = PushshiftAPI()
 #keywords = ["CMPUT 272", "Cmput 272", "cmput 272", "CMPUT272", "Cmput272", "cmput272"]
 #difficulty_keywords = ["difficulty", "challenging", "hard", "tough", "demanding"]
 
-comments = api.search_comments(q = "MATH 100"
-,subreddit="uAlberta", limit=30, sort = "desc" , sort_type =  "score" )
+comments = api.search_comments(q = "MATH 100",subreddit="uAlberta", size=10, sort = "desc" , sort_type =  "score" )
 comment_list = []
 for comment in comments: 
     if any(word in comment.get("body") for word in ["difficulty","easy","challenging", "hard" ,"hardest","difficult","worst"]):
