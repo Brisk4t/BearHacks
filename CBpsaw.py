@@ -73,7 +73,7 @@ api = PushshiftAPI()
 #difficulty_keywords = ["difficulty", "challenging", "hard", "tough", "demanding"]
 
 comments = api.search_comments(q = "MATH 100"
-,subreddit="uAlberta", limit=300, sort = "desc" , sort_type =  "score" )
+,subreddit="uAlberta", size=30, sort = "desc" , sort_type =  "score" )
 comment_list = []
 for comment in comments: 
     if any(word in comment.get("body") for word in ["difficulty","easy","challenging", "hard" ,"hardest","difficult","worst"]):
@@ -139,7 +139,7 @@ print("Elapsed time: ", elapsed_time)
 # sentiment analysis by textblob
 def classify_sentiment(comment):
     analysis = TextBlob(comment)
-    TextBlob.word_sentiment_associations.update({"hard": -1})
+    #TextBlob.word_sentiment_associations.update({"hard": -1})
     score = analysis.sentiment.polarity
     return score
 
