@@ -20,7 +20,7 @@
             "courses": [
                 {
                     "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
+                    "choose": 2, 
                     "courses":
                     [
                         {
@@ -57,7 +57,7 @@
                         "title": "Writing Persuasive Arguments",
                     },
                     ]
-                }
+                },
                 {
                     "name": "Set 2",
                     "choose": 1,
@@ -117,9 +117,11 @@
             }
             
             ]
-        },
-        {
-            "year":2,
+        }
+},
+        
+            "year2":{
+                
             "required courses":
         [
             {
@@ -134,7 +136,7 @@
             "courses": [
                 {
                     "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
+                    "choose": 2, 
                     "courses":
                     [
                         {
@@ -200,9 +202,10 @@
 
 
             ]
-        },
-        {
-            "year3":{
+        }
+},
+        
+            "year3": {
 
             
             "courses": [
@@ -291,17 +294,19 @@
         
     },
             {
-             "name": "set4",
-             "choose" :2,
+             "name": "set2",
+             "choose" :6,
              "courses": "optional courses",
             }
             
             ]
-        },
+        }
+},
 
-    {
+    
 
-    "year":4,
+    "year4":
+{
             "courses": [
     {
         "name": "Set 1",
@@ -388,14 +393,14 @@
     },
 
             {
-             "name": "set4",
-             "choose" :2,
+             "name": "set2",
+             "choose" :6,
              "courses": "optional courses",
             }
             
             ]
-        },
-    ]
+        }
+    
 }
 
 

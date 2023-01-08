@@ -72,7 +72,8 @@ api = PushshiftAPI()
 #keywords = ["CMPUT 272", "Cmput 272", "cmput 272", "CMPUT272", "Cmput272", "cmput272"]
 #difficulty_keywords = ["difficulty", "challenging", "hard", "tough", "demanding"]
 
-comments = api.search_comments(q = "MATH 100",subreddit="uAlberta", size=10, sort = "desc" , sort_type =  "score" )
+comments = api.search_comments(q = "MATH 100"
+,subreddit="uAlberta", size=30, sort = "desc" , sort_type =  "score" )
 comment_list = []
 for comment in comments: 
     if any(word in comment.get("body") for word in ["difficulty","easy","challenging", "hard" ,"hardest","difficult","worst"]):
@@ -138,6 +139,7 @@ print("Elapsed time: ", elapsed_time)
 # sentiment analysis by textblob
 def classify_sentiment(comment):
     analysis = TextBlob(comment)
+    #TextBlob.word_sentiment_associations.update({"hard": -1})
     score = analysis.sentiment.polarity
     return score
 
@@ -153,17 +155,14 @@ for comment in mainly_about_course:
 print ( " TEXTBLOB COURSE FINAL SENTIMENT: ",sentiment_avg/sentiment_num)
 
 
-#sentiment analysis by GPT
+"""#sentiment analysis by GPT
 def gpt_sentiment(txtex):
-    api_key = "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"
 
-
-    
-    openai.api_key = "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"
+    openai.api_key = "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"
 
     response = openai.Completion.create(
         model="text-davinci-003",
-        prompt= f"perform sentiment analysis on the following and give score form -1 to 1: {txtex}",
+        prompt= f"perform sentiment analysis on the following and give score form -1 to 1, where -1 is very negative and 1 is very positve. Just give a number.: {txtex}",
         temperature=0.7,
         max_tokens=256,
         top_p=1,
@@ -178,9 +177,9 @@ for comment in mainly_about_course:
     sentiment_num += 1
     sentiment = gpt_sentiment(comment)
     num_unstrip = (sentiment['choices'][0]['text'])
-    num_unstrip.replace("\n\n",'')
-    num = int(num_unstrip)
+    num = "".join(num_unstrip.splitlines())
+    num = float(num)
     sentiment_avg +=  num
-    print(f'-----Comment: {comment} -----')
+    print(f'Comment: {comment} -- Sentiment Score: {num}')
 
-print ( " GPT COURSE FINAL SENTIMENT: ",sentiment_avg/sentiment_num)
+print ( " GPT COURSE FINAL SENTIMENT: ",sentiment_avg/sentiment_num)"""

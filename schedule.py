@@ -3,7 +3,7 @@ from bearhacks import *
 
 
 def build_degree():
-    degree = 
+    degree = []
     
 
 
