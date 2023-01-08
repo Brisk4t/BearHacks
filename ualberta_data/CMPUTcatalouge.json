@@ -20,7 +20,7 @@
             "courses": [
                 {
                     "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
+                    "choose": 2, 
                     "courses":
                     [
                         {
@@ -134,7 +134,7 @@
             "courses": [
                 {
                     "name":"Set 1",
-                    "choose": 2, #you should choose either both engl or one engl and one wrs
+                    "choose": 2, 
                     "courses":
                     [
                         {
