@@ -5,6 +5,7 @@ from bearhacks import *
 def build_degree():
     degree = []
     
+    for course in 
 
 
 
