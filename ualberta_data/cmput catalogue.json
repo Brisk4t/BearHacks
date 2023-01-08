@@ -1,0 +1,182 @@
+{"year1":{
+    "Required courses":[
+        {
+            "name": "CMPUT 174",
+            "title": "Introduction to the Foundations of Computation I"
+        },
+        {
+            "name": "CMPUT 175",
+            "title": "Introduction to the Foundations of Computation II"
+        
+        },
+        {
+            "name": "MATH 125",
+            "title": "Linear Algebra I"
+           
+        }
+
+    ],
+    "any2":[[
+        {
+            "name": "ENGl 102",
+            "title": "Introduction to Critical Analysis"
+        
+        },
+        {
+        "name": "ENGl 103",
+            "title": "Case Studies in Research"
+        },
+        {
+        "name": "ENGl 108",
+            "title": "Introduction to Language and Literature"
+        },
+        {
+        "name": "ENGl 125",
+            "title": "Indigenous Literatures"
+        },
+        {
+        "name": "WRS 100",
+            "title": "Topics in Academic Writing"
+        },
+        {
+        "name": "WRS 101",
+            "title": "Exploring Writing"
+        },
+        {
+        "name": "WRS 102",
+            "title": "Writing in the Disciplines"
+        },
+        {
+        "name": "WRS 104",
+            "title": "Writing Persuasive Arguments"
+        }
+        ],[
+            {
+                "name": "MATH 117",
+                "title": "Honors Calculus I"
+                
+            },
+            {
+                "name": "MATH 134",
+                "title": "Calculus for the Life Sciences I"
+                
+            },
+            {
+                "name": "MATH 144",
+                "title": "Calculus for the Physical Sciences I"
+                
+            },
+            {
+                "name": "MATH 154",
+                "title": "Calculus for Business and Economics I"
+                
+            },
+            {
+                "name": "MATH 118",
+                "title": "Honors Calculus II"
+                
+            },
+            {
+                "name": "MATH 136",
+                "title": "Calculus for the Life Sciences II"
+                
+            },
+            {
+                "name": "MATH 146",
+                "title": "Calculus for the Physical Sciences II"
+                
+            },
+            {
+                "name": "MATH 156",
+                "title": "Calculus for Business and Economics II"
+            }
+        ],[
+            {
+                "name": "ASTRO 101",
+                "title": "Black Holes",
+                "junior": true
+                },
+                {
+                "name": "ASTRO 120",
+                "title": "Astronomy of the Solar System",
+                "junior": true
+                },
+                {
+                "name": "ASTRO 122",
+                "title": "Astronomy of Stars and Galaxies",
+                "junior": true
+                },
+                {
+                "name": "CHEM 101",
+                "title": "Introductory University Chemistry I",
+                "junior": true
+                },
+                {
+                "name": "CHEM 102",
+                "title": "Introductory University Chemistry II",
+                "junior": true
+                },
+                {
+                "name": "CHEM 164",
+                "title": "Organic Chemistry I",
+                "junior": true
+                },
+                {
+                "name": "PHYS 114",
+                "title": "Physics: The Big Picture",
+                "junior": true
+                },
+                {
+                "name": "PHYS 124",
+                "title": "Particles and Waves",
+                "junior": true
+                },
+                {
+                "name": "PHYS 126",
+                "title": "Fluids, Fields, and Radiation",
+                "junior": true
+                },
+                {
+                "name": "PHYS 144",
+                "title": "Newtonian Mechanics and Relativity",
+                "junior": true
+                },
+                {
+                "name": "PHYS 146",
+                "title": "Fluids and Waves",
+                "junior": true
+                }
+
+        ],[{
+            "name": "BIOL 107",
+            "title": "Introduction to Cell Biology",
+            "junior": true
+            },
+            {
+            "name": "BIOL 108",
+            "title": "Introduction to Biological Diversity",
+            "junior": true
+            },
+            {
+            "name": "EAS 100",
+            "title": "Planet Earth",
+            "junior": true
+            },
+            {
+            "name": "EAS 105",
+            "title": "The Dynamic Earth Through Time",
+            "junior": true
+            },
+            {
+            "name": "PSYCO 104",
+            "title": "Basic Psychological Processes",
+            "junior": true
+            }
+
+        ]
+    ]
+    
+},"year2":{
+    
+}
+}
