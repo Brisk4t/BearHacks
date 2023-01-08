@@ -1,11 +1,39 @@
 import json
+import os
+import openai
 import re
+
+# openai.api_key = "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"
+
 
 def open_json():
     with open('ualberta_data/courses.json') as f:
         data = json.load(f)
     
     return data
+
+
+def write_json(data):
+    with open("ualberta_data/courses.json", "w") as jsonFile:
+        json.dump(data, jsonFile)
+
+
+
+
+# def prereq_prompt(prereq_body):
+#     get_prerequisites = "Find the number of prerequisites for this course, ignore consent of the instructor :" + prereq_body
+
+#     response = openai.Completion.create(
+#     engine="text-davinci-003",
+#     prompt=get_prerequisites,
+#     max_tokens=1024,
+#     n=4,
+#     stop=None,
+#     temperature=0.5,
+# )
+
+#     print(response.choices[2].text)
+
 
 def create_prerequisite(json_data):
     for course in json_data:
@@ -14,20 +42,80 @@ def create_prerequisite(json_data):
             if prereq_string:
                 if(prereq_string.partition('Corequisites:')[2]):
                     print(course + ":", end="")
-                    print(prereq_string.partition('Corequisites:')[2])
+                    json_data[course]['course_corequisites'] = prereq_string.partition('Corequisites:')[2];
+                    json_data[course]['course_prerequisites'] = prereq_string.partition('Corequisites:')[0];
+                    print(json_data[course]['course_corequisites'])
+
                 elif(prereq_string.partition('Corequisite:')[2]):
                     print(course + ":", end="")
-                    print(prereq_string.partition('Corequisite:')[2])
+                    json_data[course]['course_corequisites'] = prereq_string.partition('Corequisite:')[2];
+                    json_data[course]['course_prerequisites'] = prereq_string.partition('Corequisite:')[0];
+                    print(json_data[course]['course_corequisites'])
+
+                else:
+                    json_data[course]['course_corequisites'] = None
+
                 
 
+    write_json(json_data)
+
+
+def get_courses(s):
+    courses = []
+
+    # Split the string on the semicolon character
+    for item in s.split(';'):
+        
+        code = re.findall("(and [A-Z]{3,5} \d{3}|or \d{3}|[A-Z]{3,5} \d{3}|, \d{3}| or [A-Z]{3,5} \d{3})", item) # retuns a list of XXXX YYY / or XXX / or , XXX
+        
+        
+        alts = []
+        alts2 = []
+        
+        for match in code:
+            if("and" in match):
+                
+                alts2.append(match.partition('and ')[2])
+                
+
+            else:
+                
+                
+                if(", " in match):
+                    alts.append(alts[0].partition(" ")[0] + " " + match.partition(", ")[2])
+
+                elif('or' in match):
+                    part = match.partition('or ')[2]
+                    if(len(part) == 3):
+                        alts.append(alts[0].partition(" ")[0] + " " + part)
+
+                    else:
+                        alts.append(match.partition('or ')[2])
+                
+                else:
+                    alts.append(match)
+
+        if(alts):
+            courses.append(alts)
+        
+        if(alts2):
+            courses.append(alts2)
+            
+
+        #courses[code] = numbers
+
+    return courses
 
 def main():
     json_data = open_json() # Json_data -> Dict
 
-    create_prerequisite(json_data)
+    
+    #create_prerequisite(json_data)
 
-    # print("CMPUT 174: ")
-    # print(json_data["CMPUT267"]['course_prerequisites'])
+    print(json_data['CMPUT272']['course_prerequisites'])
+    print(get_courses(json_data['CMPUT272']['course_prerequisites']))
+
+    #prereq_prompt(json_data['CMPUT291']['course_prerequisites'])
 
 
 main()
