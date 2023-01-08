@@ -2,22 +2,28 @@ import json
 import os
 import openai
 import re
+import random
 
 # openai.api_key = "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"
 
 
-def open_json():
-    with open('ualberta_data/courses.json') as f:
+def open_json(json_location):
+    absolute_path = os.path.dirname(__file__)
+    relative_path = json_location
+    full_path = os.path.join(absolute_path, relative_path)
+    with open(full_path) as f:
         data = json.load(f)
     
     return data
 
 
-def write_json(data):
-    with open("ualberta_data/courses.json", "w") as jsonFile:
+def write_json(data, json_location):
+    absolute_path = os.path.dirname(__file__)
+    relative_path = json_location
+    full_path = os.path.join(absolute_path, relative_path)
+
+    with open(full_path, "w") as jsonFile:
         json.dump(data, jsonFile)
-
-
 
 
 # def prereq_prompt(prereq_body):
@@ -37,7 +43,6 @@ def write_json(data):
 
 def create_prerequisite(json_data):
     for course in json_data:
-        if 'CMPUT' in course:
             prereq_string = json_data[course]['course_prerequisites']
             if prereq_string:
                 if(prereq_string.partition('Corequisites:')[2]):
@@ -57,7 +62,7 @@ def create_prerequisite(json_data):
 
                 
 
-    write_json(json_data)
+    return json_data
 
 
 def get_courses(s):
@@ -106,14 +111,22 @@ def get_courses(s):
 
     return courses
 
+def substisute_difficulty(json_data):
+    for course in json_data:
+        json_data[course]['difficulty'] = random.uniform(-1, 1)
+    
+    return json_data
+
 def main():
-    json_data = open_json() # Json_data -> Dict
+    json_data = open_json("ualberta_data/courses.json") # Json_data -> Dict
 
     
-    #create_prerequisite(json_data)
+    #json_data = create_prerequisite(json_data)
+    #json_data = substisute_difficulty(json_data)
+    #write_json(json_data, "ualberta_data/courses.json")
 
-    print(json_data['CMPUT272']['course_prerequisites'])
-    print(get_courses(json_data['CMPUT272']['course_prerequisites']))
+    print(json_data['CMPUT 272']['course_prerequisites'])
+    print(get_courses(json_data['CMPUT 272']['course_prerequisites']))
 
     #prereq_prompt(json_data['CMPUT291']['course_prerequisites'])
 
