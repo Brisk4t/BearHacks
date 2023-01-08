@@ -1,5 +1,8 @@
 # BearHacks - Being Careless, Machine Learning style.
 
+![54351d70babcc8ed308e40ed147477c5](https://user-images.githubusercontent.com/31730769/211211477-1653d229-d0b0-4ad7-8be6-9fbfe0faf2f6.png)
+
+
 
 ### Inspiration
 
@@ -15,7 +18,8 @@ After being utterly confused by the prerequisites and corequisites of our Univer
 
 BearHacks uses a combination of Machine Learning and Web Scraping to gather data for all university of Alberta courses, and runs a sentiment analysis algorithm on all Reddit posts about them. Based on this analysis it creates a degree plan that ensures a stable difficulty across every semester while accounting for prerequisites and corequisites. 
 
-### Challenges we ran into
+### Challenges we ran into![54351d70babcc8ed308e40ed147477c5](https://user-images.githubusercontent.com/31730769/211211467-f4870d36-c03f-479c-a7f0-799f8dd00bd2.png)
+
 
 - Due to the slow Reddit API, building a detailed analysis of every course's sentiment would take more time than we had to spare. So we had to limit the number of comments analyzed, reducing the accuracy of the analysis.
 
