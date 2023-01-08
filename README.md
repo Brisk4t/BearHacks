@@ -1,4 +1,3 @@
-# BearHacks
 # BearHacks - Being Careless, Machine Learning style.
 
 
