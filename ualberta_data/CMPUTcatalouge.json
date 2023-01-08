@@ -303,8 +303,8 @@
     
 
     "year4":{
-            "courses": [
-    {
+        "courses": [
+        {
         "name": "Set 1",
         "choose":4,
         "courses": [
@@ -363,33 +363,20 @@
                 "title": "Visual Recognition"
             },
             {
-                "name": "CMPUT 330",
-                "title": "Introduction to Artificial Intelligence"
-               
-            },
-            {
                 "name": "CMPUT 350",
                 "title": "Introduction to Computer Graphics"
                 
             },
-            {
-                "name": "CMPUT 362",
-                "title": "Introduction to Computer Security"  
-        },
         {
                 "name": "CMPUT 365",
                 "title": "Introduction to Machine Learning"
 
-        },
-        {
-            "name": "CMPUT 372",
-                "title": "Introduction to Compiler Construction"
         }
         ]
     },
 
             {
-             "name": "set4",
+             "name": "set2",
              "choose" :2,
              "courses": "optional courses"
             }

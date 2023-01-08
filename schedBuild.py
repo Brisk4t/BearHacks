@@ -19,8 +19,6 @@ def can_take_course(user_courses, course_code, course_data):
   if not prerequisites :
     return True
 
-
- 
   #prereq_groups = [[p.strip() for p in group] for group in prereq_groups]
 
   # Check if the user has completed any of the prerequisites in each group
@@ -91,7 +89,7 @@ def create_schedule(user_courses, catalouge_data, course_data):
 
 def main():
   # Load the course data from a JSON file
-  courseData =  open_json("ualberta_data/courses.json") # Json_data -> Dict
+  courseData = open_json("ualberta_data/courses.json") # Json_data -> Dict
   catalouge_data = open_json("ualberta_data/CMPUTcatalouge.json")
   courseCodeList = course_names(course_data=courseData)
   print(courseCodeList)
