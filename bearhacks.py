@@ -17,8 +17,12 @@ def open_json(json_location):
     return data
 
 
-def write_json(data):
-    with open("ualberta_data/courses.json", "w") as jsonFile:
+def write_json(data, json_location):
+    absolute_path = os.path.dirname(__file__)
+    relative_path = json_location
+    full_path = os.path.join(absolute_path, relative_path)
+
+    with open(full_path, "w") as jsonFile:
         json.dump(data, jsonFile)
 
 
@@ -119,7 +123,7 @@ def main():
     
     #json_data = create_prerequisite(json_data)
     #json_data = substisute_difficulty(json_data)
-    #write_json(json_data)
+    #write_json(json_data, "ualberta_data/courses.json")
 
     print(json_data['CMPUT 267']['course_prerequisites'])
     print(get_courses(json_data['CMPUT 267']['course_prerequisites']))
