@@ -125,8 +125,8 @@ def main():
     #json_data = substisute_difficulty(json_data)
     #write_json(json_data, "ualberta_data/courses.json")
 
-    print(json_data['CMPUT 267']['course_prerequisites'])
-    print(get_courses(json_data['CMPUT 267']['course_prerequisites']))
+    print(json_data['CMPUT 272']['course_prerequisites'])
+    print(get_courses(json_data['CMPUT 272']['course_prerequisites']))
 
     #prereq_prompt(json_data['CMPUT291']['course_prerequisites'])
 
