@@ -71,7 +71,7 @@ api = PushshiftAPI()
 #keywords = ["CMPUT 272", "Cmput 272", "cmput 272", "CMPUT272", "Cmput272", "cmput272"]
 #difficulty_keywords = ["difficulty", "challenging", "hard", "tough", "demanding"]
 
-comments = api.search_comments(q = "CMPUT 272" or "CMPUT272" or "cmput 272" or "cmput272" or "Cmput 272"
+comments = api.search_comments(q = "CMPUT 272" or "CMPUT272" or "cmput 272" or "cmput272" 
 ,subreddit="uAlberta", limit=300, sort = "desc" , sort_type =  "score" )
 comment_list = []
 for comment in comments: 
