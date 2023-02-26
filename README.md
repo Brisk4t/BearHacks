@@ -1,12 +1,12 @@
 # BearHacks - Being Careless, Machine Learning style.
 
 <p align="center">
-<img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" /></a>
-<img src="https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white" /></a>
-<img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /></a>
-<img src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" /></a>
+  <img src="https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white" /></a>
+  <img src="https://img.shields.io/badge/json-5E5C5C?style=for-the-badge&logo=json&logoColor=white" /></a>
 
-![54351d70babcc8ed308e40ed147477c5](https://user-images.githubusercontent.com/31730769/211211477-1653d229-d0b0-4ad7-8be6-9fbfe0faf2f6.png)
+  ![54351d70babcc8ed308e40ed147477c5](https://user-images.githubusercontent.com/31730769/211211477-1653d229-d0b0-4ad7-8be6-9fbfe0faf2f6.png)
 
 </p>
 
